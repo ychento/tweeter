@@ -16,3 +16,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Screenshot description"] https://github.com/ychento/tweeter/blob/02962cc085e138684f3094593cd30c1e6a0a7c02/docs/tweet-box.png
+!["Screenshot description"] https://github.com/ychento/tweeter/blob/02962cc085e138684f3094593cd30c1e6a0a7c02/docs/tweet-profile.png
