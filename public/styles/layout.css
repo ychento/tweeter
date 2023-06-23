@@ -3,6 +3,7 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
   box-sizing: border-box;
 }
@@ -10,16 +11,93 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
 
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+nav .logo {
+  font-family: 'Bungee', cursive;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  background-color: inherit;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: inherit;
+}
+
+.new-tweet, #tweets-container {
+  width: 50%;
+}
+
+
+#tweets-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  
+  margin: 0 auto;
+}
+
+.tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px;
+  margin-bottom: 20px;
+  border: 3px solid black;
+  width: 100%;
+}
+
+.tweet .tweet-text {
+  border-bottom: 3px solid black;
+  width: 100%;
+}
+
+.tweet .tweet-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweet .tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tweet .tweet-header-handle {
+  color: blue;
+}
+
+
+
+#error-container {
+  background-color: #ffcccc;
+  padding: 10px;
+  color: #f22707;
+  font-weight: bold;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  align-content: center;
+}
+
+#error-container.show {
+  display: block;
+}
