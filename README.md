@@ -19,6 +19,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-![Screenshot of tweet box] (https://github.com/ychento/tweeter/blob/02962cc085e138684f3094593cd30c1e6a0a7c02/docs/tweet-box.png)
+!["Screenshot of tweet box"] (https://github.com/ychento/tweeter/blob/02962cc085e138684f3094593cd30c1e6a0a7c02/docs/tweet-box.png)
 
-![Screenshot of tweet profile] (https://github.com/ychento/tweeter/blob/02962cc085e138684f3094593cd30c1e6a0a7c02/docs/tweet-profile.png)
+!["Screenshot of tweet profile"] (https://github.com/ychento/tweeter/blob/02962cc085e138684f3094593cd30c1e6a0a7c02/docs/tweet-profile.png)
