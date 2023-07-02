@@ -38,6 +38,7 @@
 
   </head>
 
+
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
@@ -49,38 +50,45 @@
        <!-- Added line -->
     </nav>
 
-    
-
-    <header class="header1">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>YC</h2>
-      </div>
-    </header>
-
-    <!-- Page-specific (main) content here -->
     <div id="error-container"></div>
+
+
+    <main>
+      <header class="header1">
+        <div id="profile-photo">
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div id="name">
+            <h2>YC</h2>
+        </div>
+      </header>
+  
+      <!-- Page-specific (main) content here -->
     
-    <div class="container">
-      <section class="new-tweet">
-        <form id="tweet-form" action="/tweets" method="POST">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">0</output>
-          </div>
-        </form>
-      </section>
+      <div class="container">
+        <section class="new-tweet">
+          <form id="tweet-form" action="/tweets" method="POST">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div>
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">0</output>
+            </div>
+          </form>
+        </section>
+        <section id="tweets-container">
+        </section>
+      </div>
+
+    </main>
+
+    
 
 
-      <section id="tweets-container">
-      </section>
 
-    </div>
+
+
   </body>
 </html>
 
