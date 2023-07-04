@@ -31,11 +31,13 @@ main {
   margin: 20vh auto;
   background-color: inherit;
   align-items: flex-start;
+  justify-content: space-between;
 }
 
 .header1 {
-  height: 50vh;
-  background-color: rgb(235, 201, 32); 
+  width: 50%;
+  background-color: #e0cd00;
+  background-image: url("https://www.transparenttextures.com/patterns/blu-stripes.png");
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,13 +84,13 @@ main {
 }
 
 .new-tweet, #tweets-container {
-  width: 50%;
+  width: 100%;
 }
 
 
 
 #tweets-container {
-  width: 50%;
+  width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
   display: flex;
@@ -106,6 +108,10 @@ main {
   margin-bottom: 20px;
   border: 3px solid black;
   width: 100%;
+}
+
+.tweet:hover {
+  box-shadow: 10px 5px 5px rgb(124, 117, 215);
 }
 
 .tweet .tweet-text {
@@ -128,6 +134,12 @@ main {
 
 .tweet .tweet-header-handle {
   color: blue;
+}
+
+.fa-flag:hover,
+.fa-retweet:hover,
+.fa-heart:hover {
+  color: yellow
 }
 
 

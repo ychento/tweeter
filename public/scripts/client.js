@@ -33,6 +33,9 @@ const createTweetElement = function (tweetData) {
     </article>
   `);
 
+  $tweet.find('.tweet-text').text(text);
+  $tweet.find('.tweet-footer span').text(timePassed);
+
   return $tweet;
 };
 
@@ -40,7 +43,6 @@ const createTweetElement = function (tweetData) {
 
 
 $(document).ready(function () {
-
   const loadTweets = function () {
     $.ajax({
       url: '/tweets',
