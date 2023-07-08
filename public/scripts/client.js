@@ -1,4 +1,11 @@
+// Function to escape special characters in a string
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
+// Function to render tweets on the page
 const renderTweets = function (tweets) {
   $('#tweets-container').empty();
 
@@ -8,6 +15,7 @@ const renderTweets = function (tweets) {
   }
 };
 
+// Function to create a tweet element based on tweet data
 const createTweetElement = function (tweetData) {
   const { name, avatars, handle } = tweetData.user;
   const { text } = tweetData.content;
@@ -39,10 +47,8 @@ const createTweetElement = function (tweetData) {
   return $tweet;
 };
 
-
-
-
 $(document).ready(function () {
+  // Function to load tweets from the server
   const loadTweets = function () {
     $.ajax({
       url: '/tweets',
@@ -60,30 +66,28 @@ $(document).ready(function () {
     });
   };
 
- 
-  const submitTweet = function(formData) {
+  // Function to submit a new tweet
+  const submitTweet = function (formData) {
     $.post('/tweets', formData)
-      .then(function(response) {
+      .then(function (response) {
         console.log('Tweet submitted successfully:', response);
         $('#tweet-text').val('');
         loadTweets();
-      })
+      });
   };
 
+  // Function to display an error message
   function displayError(errorMessage) {
     const errorContainer = $('#error-container');
     errorContainer.text(errorMessage);
     errorContainer.addClass('show');
   }
 
-
-
-
   // Submit form handler
   $('#tweet-form').submit(function (event) {
     event.preventDefault();
 
-    const input = $(this).find('#tweet-text').val();
+    const input = $(this).find('#tweet-text').val().trim(); // Trim the tweet
 
     if (!input.length) {
       displayError('Tweet is too short.');
@@ -91,20 +95,13 @@ $(document).ready(function () {
     }
 
     if (input.length > 140) {
-      displayError('Tweet is too long. Please limit it to 140 chareacters.');
+      displayError('Tweet is too long. Please limit it to 140 characters.');
       return;
     }
 
     const formData = $(this).serialize();
     submitTweet(formData);
-
   });
 
   loadTweets();
-
 });
-
-
-
-
-
