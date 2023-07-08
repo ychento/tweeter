@@ -19,6 +19,7 @@ nav span {
 .write-a-new-tweet {
   display: flex;
   justify-content: flex-end;
+  font-family: 'Source Sans 3', sans-serif;
   font-size: 13px;
   padding: 0 1.5em; 
 }
