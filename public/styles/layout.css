@@ -48,11 +48,19 @@ main {
   main {
     flex-direction: column; /* Change the flex-direction of main to column */
     align-items: center; /* Align items to the center */
+    width: 100%;
+    margin-top: 0;
+  }
+
+  nav {
+    background-color: #e0cd00; 
+    background-image: url("https://www.transparenttextures.com/patterns/blu-stripes.png");
   }
   
   .header1 {
     align-self: flex-start; /* Align .header1 to the top */
     width: 100%; /* Set the width of .header1 to 100% */
+    padding-top: 12vh;
   }
   
   .container {
