@@ -98,6 +98,7 @@ main {
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
+  word-wrap:break-word;
 }
 
 .tweet {
@@ -117,6 +118,7 @@ main {
 .tweet .tweet-text {
   border-bottom: 3px solid black;
   width: 100%;
+  
 }
 
 .tweet .tweet-header {
@@ -155,6 +157,7 @@ main {
   width: 100%;
   z-index: 9999;
   align-content: center;
+  border:#f22707 2px solid;
 }
 
 #error-container.show {
