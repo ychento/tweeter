@@ -55,13 +55,9 @@ $(document).ready(function () {
       method: 'GET',
       dataType: 'json',
       success: function (response) {
-        // Handle the success response
-        console.log('Tweets loaded successfully:', response);
-        // Call the renderTweets function passing the response array
         renderTweets(response);
       },
       error: function (error) {
-        console.log('Error loading tweets:', error);
       }
     });
   };
@@ -70,10 +66,10 @@ $(document).ready(function () {
   const submitTweet = function (formData) {
     $.post('/tweets', formData)
       .then(function (response) {
-        console.log('Tweet submitted successfully:', response);
         $('#tweet-text').val('');
         loadTweets();
-      });
+      })
+      .catch(function(error){});
   };
 
   // Function to display an error message
