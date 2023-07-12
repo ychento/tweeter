@@ -75,8 +75,17 @@ $(document).ready(function () {
   // Function to display an error message
   function displayError(errorMessage) {
     const errorContainer = $('#error-container');
-    errorContainer.text(errorMessage);
-    errorContainer.addClass('show');
+
+    if (errorMessage) {
+      errorContainer.text(errorMessage);
+      errorContainer.slideDown(1000, function() {
+        setTimeout(function() {
+          errorContainer.slideUp(1000);
+        }, 1000);
+      });
+    } else {
+      errorContainer.slideUp(1000);
+    }
   }
 
   // Submit form handler
