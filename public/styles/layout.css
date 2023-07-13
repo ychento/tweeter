@@ -43,43 +43,15 @@ main {
   align-items: center;
 }
 
-/* Add a media query for mobile devices */
-@media only screen and (max-width: 600px) {
-  main {
-    flex-direction: column; /* Change the flex-direction of main to column */
-    align-items: center; /* Align items to the center */
-    width: 100%;
-    margin-top: 0;
-  }
-
-  nav {
-    background-color: #e0cd00; 
-    background-image: url("https://www.transparenttextures.com/patterns/blu-stripes.png");
-  }
-  
-  .header1 {
-    align-self: flex-start; /* Align .header1 to the top */
-    width: 100%; /* Set the width of .header1 to 100% */
-    padding-top: 12vh;
-  }
-  
-  .container {
-    width: 100%; /* Set the width of .container to 100% */
-  }
-
-  #tweets-container {
-    width: 100%;
-  }
-}
-
-
 .container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   background-color: inherit;
+  width: 50%;
 }
+
 
 #tweet-form {
   display: flex;
@@ -170,4 +142,34 @@ main {
 
 #error-container.show {
   display: block;
+}
+
+/* Add a media query for mobile devices */
+@media only screen and (max-width: 1024px) {
+  main {
+    flex-direction: column; /* Change the flex-direction of main to column */
+    align-items: center; /* Align items to the center */
+    width: 100%;
+    margin-top: 0;
+  }
+
+  nav {
+    background-color: #e0cd00; 
+    background-image: url("https://www.transparenttextures.com/patterns/blu-stripes.png");
+  }
+  
+  .header1 {
+    align-self: flex-start; /* Align .header1 to the top */
+    width: 100%; /* Set the width of .header1 to 100% */
+    padding-top: 12vh;
+    height: 400px;
+  }
+  
+  .container {
+    width: 100%; /* Set the width of .container to 100% */
+  }
+
+  #tweets-container {
+    width: 100%;
+  }
 }
